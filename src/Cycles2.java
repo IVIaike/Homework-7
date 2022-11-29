@@ -37,5 +37,43 @@ public class Cycles2 {
             System.out.println("Год "  + year + ", численность населения составляет " + population + " человек.");
         }
 
+        //Задание 2.1 и 2.2
+        System.out.println("Задание 2.1 и 2.2");
+
+        int newMonthlyPayment = 15000;
+        int totalSum = 0;
+        int monthNumber = 0;
+        while(totalSum<=12000000) {
+            totalSum = totalSum + (totalSum*7/100);
+            totalSum = totalSum + newMonthlyPayment;
+            monthNumber++;
+            if (monthNumber % 6 ==0) {  // это условие является решением задачи 2.2
+                System.out.println("Месяц" + monthNumber + ", сумма накоплений - " + totalSum + " рублей");
+            }
+        }
+
+        //Задание 2.3
+        System.out.println("Задание 2.3");
+
+        int nwMonthlyPayment = 15000;
+        int nwTotalSum = 0;
+        int nwMonthNumber = 0;
+        while(nwMonthNumber<=108) {
+            nwTotalSum = nwTotalSum + (nwTotalSum*7/100);
+            nwTotalSum = nwTotalSum + nwMonthlyPayment;
+            nwMonthNumber++;
+            if (nwMonthNumber % 6 ==0) {
+                System.out.println("Месяц" + nwMonthNumber + ", сумма накоплений - " + nwTotalSum + " рублей");
+            }
+        }
+
+        //Задание 2.4
+        System.out.println("Задание 2.4");
+
+        int friday;
+        for (friday = 3; friday <= 31; friday = friday + 7) {
+                System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+        }
+
     }
 }
