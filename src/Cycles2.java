@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Cycles2 {
     public static void main(String[] args) {
 
@@ -70,10 +72,40 @@ public class Cycles2 {
         //Задание 2.4
         System.out.println("Задание 2.4");
 
-        int friday;
-        for (friday = 3; friday <= 31; friday = friday + 7) {
+        int friday = 3;
+        for (int day = 1; day <= 31; day++) {
+            if ((day - friday) % 7 == 0) {
                 System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+            }
         }
 
+        //Задание 3.1
+        System.out.println("Задание 3.1");
+
+        int period = 79;
+        int year = 0;
+        int currentYear = 2022;
+        int intervalYearsStart = currentYear - 200;
+        int intervalYearsFinish = currentYear + 100;
+
+        while (year <= intervalYearsFinish) {
+            if (year % period == 0 && year > intervalYearsStart && year < intervalYearsFinish) {
+                System.out.println(year);
+            }
+            year++;
+        }
+
+        //Задание 3.2
+        System.out.println("Задание 3.2");
+
+        //multiplication table
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите множитель от 1 до 10:");
+        int multiplier = in.nextInt();
+        for (int m = 1; m <= 10; m++) {
+            int result = multiplier * m;
+            System.out.println(multiplier + " * " + m + " = " + result);
+        }
     }
+
 }
